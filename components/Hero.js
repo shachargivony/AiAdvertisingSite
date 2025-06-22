@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="absolute bottom-20 left-1/3 w-36 h-36 bg-blue-200/40 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 mt-50">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 pt-20">
         <div className="text-center">
           {/* Main Headline */}
           <div className="mb-8">
