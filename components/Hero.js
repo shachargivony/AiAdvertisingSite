@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle, TrendingUp, Users, Zap } from 'lucide-react';
+import { AnimatedEyes } from './AnimatedEyes';
 
 export default function Hero() {
   const handleWhatsAppClick = () => {
@@ -19,7 +20,7 @@ export default function Hero() {
         <div className="absolute bottom-20 left-1/3 w-36 h-36 bg-blue-200/40 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 mt-50">
         <div className="text-center">
           {/* Main Headline */}
           <div className="mb-8">
@@ -32,10 +33,7 @@ export default function Hero() {
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
                   100,000 עיניים!
                 </span>
-                <div className="absolute -top-2 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-bounce
-                                shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),0_4px_12px_rgba(251,191,36,0.4)]">
-                  <span className="text-xl">👀</span>
-                </div>
+                <AnimatedEyes />
               </span>
             </h1>
           </div>
@@ -71,7 +69,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* CTA Button */}
+          {/* WhatsApp Button */}
           <div className="flex flex-col items-center gap-6">
             <button
               onClick={handleWhatsAppClick}
@@ -90,17 +88,24 @@ export default function Hero() {
               </div>
             </button>
 
-            <p className="text-gray-600 text-lg">
+            {/* Restore the fast publish line */}
+            <p className="text-gray-600 text-lg mt-4">
               ⚡ <span className="font-semibold">אפשרות לפרסום מיידי גם תוך שעה!</span>
             </p>
-          </div>
 
-          {/* Arrow pointing down */}
-          <div className="mt-16 animate-bounce">
-            <div className="w-12 h-12 mx-auto bg-white/60 backdrop-blur-sm rounded-full
-                            shadow-[inset_0_2px_8px_rgba(255,255,255,0.6),0_4px_16px_rgba(0,0,0,0.1)]
-                            border border-white/30 flex items-center justify-center">
-              <div className="w-0 h-0 border-l-4 border-r-4 border-t-6 border-l-transparent border-r-transparent border-t-gray-600"></div>
+            {/* New: Slogan + Arrow (centered vertically) */}
+            <div className="flex flex-col items-center justify-center mt-6 w-full min-h-[40vh]">
+              <div className="text-2xl font-semibold text-gray-700 mb-2">
+                קבלו יותר פניות, בקלות ובמהירות!
+              </div>
+              <div className="text-gray-500 mb-2">
+                הצטרפו לעסקים שכבר נהנים מחשיפה חכמה בוואטסאפ
+              </div>
+              <div className="flex justify-center mt-2 animate-bounce">
+                <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+                  <path d="M12 5v14m0 0l-7-7m7 7l7-7" stroke="#888" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
             </div>
           </div>
         </div>

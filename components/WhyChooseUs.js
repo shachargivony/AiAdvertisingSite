@@ -11,8 +11,8 @@ export default function WhyChooseUs() {
     },
     {
       icon: Target,
-      title: "קהל ממוקד ורלוונטי – מעל 100,000 איש",
-      description: "הפרסום מגיע בדיוק לקהל שמעוניין בשירותים שלכם",
+      title: "קהל רחב ורלוונטי – מעל 100,000 איש",
+      description: "הפרסום מגיע לקהל רחב של מעל 100,000 אנשים רלוונטיים ואיכותיים.",
       color: "from-red-400 to-pink-400"
     },
     {

@@ -44,23 +44,28 @@ export default function Contact() {
 
             <button
               onClick={handleWhatsAppClick}
-              className="group bg-gradient-to-r from-green-400 via-green-500 to-green-600 
+              className="group relative flex flex-col items-center justify-center bg-gradient-to-r from-green-400 via-green-500 to-green-600 
                          hover:from-green-500 hover:via-green-600 hover:to-green-700
-                         text-white px-12 py-6 rounded-3xl text-2xl font-bold
-                         shadow-[inset_0_3px_12px_rgba(255,255,255,0.3),0_16px_48px_rgba(34,197,94,0.4)]
-                         hover:shadow-[inset_0_3px_12px_rgba(255,255,255,0.4),0_20px_60px_rgba(34,197,94,0.5)]
+                         text-white px-10 py-4 rounded-3xl text-lg font-bold
+                         shadow-[inset_0_3px_12px_rgba(255,255,255,0.3),0_12px_32px_rgba(34,197,94,0.3)]
+                         hover:shadow-[inset_0_3px_12px_rgba(255,255,255,0.4),0_16px_40px_rgba(34,197,94,0.4)]
                          transform hover:scale-105 transition-all duration-300 ease-out
                          border border-green-300/30 backdrop-blur-sm
-                         flex items-center gap-4 mx-auto"
+                         animate-[pulse-flash-strong_1.1s_infinite] mx-auto"
+              style={{ minWidth: '220px' }}
             >
-              <MessageCircle className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />
-              <div className="text-right">
-                <div>לחץ כאן ונדבר בוואטסאפ</div>
-                <div className="flex items-center gap-2 text-lg opacity-90">
-                  <Phone className="w-4 h-4" />
-                  053-2750181
-                </div>
-              </div>
+              <MessageCircle className="w-6 h-6 mb-1" />
+              <span className="text-base md:text-lg font-semibold mb-1">053-2750181</span>
+              <span className="text-sm md:text-base">לחץ כאן ונדבר בוואטסאפ</span>
+              {/* Floating notification bubble */}
+              <div className="absolute -top-2 -left-2 w-3 h-3 bg-red-500 rounded-full animate-bounce
+                              shadow-[inset_0_1px_2px_rgba(255,255,255,0.3),0_2px_8px_rgba(239,68,68,0.4)]"></div>
+              <style jsx global>{`
+                @keyframes pulse-flash-strong {
+                  0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.7), 0_12px_32px_rgba(34,197,94,0.3); }
+                  50% { box-shadow: 0 0 0 18px rgba(34,197,94,0.18), 0_12px_32px_rgba(34,197,94,0.3); }
+                }
+              `}</style>
             </button>
           </div>
 

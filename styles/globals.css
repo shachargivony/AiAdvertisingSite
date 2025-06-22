@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+/* Animated Eyes - smooth side-to-side, synchronized */
+.eyes-animation {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 4px;
+}
+.eye {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border-radius: 50%;
+  border: 1.5px solid #444;
+  margin: 0 3px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 6px #0001;
+}
+.pupil {
+  width: 13px;
+  height: 13px;
+  background: #222;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  animation: pupil-side 2.8s infinite cubic-bezier(.7,0,.3,1);
+}
+@keyframes pupil-side {
+  0%   { left: 10px; }
+  20%  { left: 16px; }
+  50%  { left: 4px; }
+  80%  { left: 16px; }
+  100% { left: 10px; }
+} 
