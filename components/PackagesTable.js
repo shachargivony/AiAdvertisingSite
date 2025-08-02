@@ -25,7 +25,7 @@ export default function PackagesTable({ packages }) {
     {
       name: "פרימיום",
       originalPrice: 300,
-      currentPrice: 200,
+      currentPrice: 220,
       duration: "5 ימים רצופים",
       allGroups: true,
       adCreation: false,
@@ -37,7 +37,7 @@ export default function PackagesTable({ packages }) {
     {
       name: "VIP",
       originalPrice: 550,
-      currentPrice: 400,
+      currentPrice: 450,
       duration: "חודש מלא (5 ימים בשבוע)",
       allGroups: true,
       adCreation: true,
